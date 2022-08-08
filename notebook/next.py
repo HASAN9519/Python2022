@@ -3,4 +3,4 @@ lname = input("enter last name: ")
 fullname = fname+"@"+lname
 
 print("Full Name:", fullname)
-print("he is a bangladeshi")
+print("he is a bangladeshi and doctor")
