@@ -5,3 +5,4 @@ fullname = fname+"."+mname+"."+lname+"@gmail.com"
 
 print("Full Name:", fullname)
 print("he is a bangladeshi")
+print("he is a bangladeshi")
