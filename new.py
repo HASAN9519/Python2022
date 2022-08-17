@@ -15,5 +15,7 @@ except:
     print("There was an error")
 
 """
-
+x= '1:2,3:4'
+y=x.split(':')
+print(y)
 
