@@ -1,0 +1,175 @@
+[    
+    {
+        "movieinfo": 
+        {
+            "title": "Snow White and the Seven Dwarfs",
+            "productioninfo":
+            {
+                "Directed by": [
+                    "David Hand",
+                    "William Cottrell",
+                    "Wilfred Jackson",
+                    "Larry Morey",
+                    "Perce Pearce",
+                    "Ben Sharpsteen"
+                ],
+                "Written by": [
+                    "Ted Sears",
+                    "Richard Creedon",
+                    "Otto Englander",
+                    "Dick Rickard",
+                    "Earl Hurd",
+                    "Merrill De Maris",
+                    "Dorothy Ann Blank",
+                    "Webb Smith"
+                ],
+                "Based on": "Snow White by The Brothers Grimm",
+                "Produced by": "Walt Disney",
+                "Production company": "Walt Disney Productions",
+                "Distributed by": "RKO Radio Pictures"
+            },
+            "ActorsAndMusic": 
+            {
+                "Starring": [
+                    "Adriana Caselotti",
+                    "Lucille La Verne",
+                    "Harry Stockwell",
+                    "Roy Atwell",
+                    "Pinto Colvig",
+                    "Otis Harlan",
+                    "Scotty Mattraw",
+                    "Billy Gilbert",
+                    "Eddie Collins",
+                    "Moroni Olsen",
+                    "Stuart Buchanan"
+                ],
+                "Music by": [
+                    "Frank Churchill",
+                    "Paul Smith",
+                    "Leigh Harline"
+                ]
+            },
+            "otherInfo": 
+            {
+                "Release dates": [
+                    "December 21, 1937 ( 1937-12-21 ) ( Carthay Circle Theatre )",
+                    "February 4, 1938 ( 1938-02-04 ) (United States)"
+                ],
+                "Running time": "83 minutes",
+                "Budget in million": "1.49",
+                "Box office in million": "418"
+            }
+        },
+        "Country": "United States",
+        "Language": "English" 
+    },
+    {
+        "movieinfo": 
+        {
+            "title": "Pinocchio",
+            "productioninfo":
+            {
+                "Directed by": [
+                    "Ben Sharpsteen",
+                    "Hamilton Luske",
+                    "Bill Roberts",
+                    "Norman Ferguson",
+                    "Jack Kinney",
+                    "Wilfred Jackson",
+                    "T. Hee"
+                ],
+                "Written by": [
+                    "Ted Sears",
+                    "Otto Englander",
+                    "Webb Smith",
+                    "William Cottrell",
+                    "Joseph Sabo",
+                    "Erdman Penner",
+                    "Aurelius Battaglia"
+                ],
+                "Based on": "he Adventures of Pinocchio by Carlo Collodi",
+                "Produced by": "Walt Disney",
+                "Production company": "Walt Disney Productions",
+                "Distributed by": "Sony Pictures"
+            },
+            "ActorsAndMusic": 
+            {
+                "Starring": [
+                    "Cliff Edwards",
+                    "Dickie Jones",
+                    "Christian Rub",
+                    "Walter Catlett",
+                    "Charles Judels",
+                    "Evelyn Venable",
+                    "Frankie Darro"
+                ],
+                "Music by": [
+                    "Leigh Harline",
+                    "Paul J. Smith"
+                ]
+            },
+            "otherInfo": 
+            {
+                "Release dates": [
+                    "December 21, 1937 ( 1937-12-21 ) ( Carthay Circle Theatre )",
+                    "February 4, 1938 ( 1938-02-04 ) (United States)"
+                ],
+                "Running time": "88 minutes",
+                "Budget in million": "2.6",
+                "Box office in million": "164"
+            }
+        },
+        "Country": "United States",
+        "Language": "English" 
+    },
+    {
+        "movieinfo": 
+        {
+            "title": "Fantasia",
+            "productioninfo":
+            {
+                "Directed by": [
+                    "Samuel Armstrong",
+                    "James Algar",
+                    "Bill Roberts",
+                    "Paul Satterfield",
+                    "Ben Sharpsteen",
+                    "David D. Hand",
+                    "Hamilton Luske",
+                    "Jim Handley",
+                    "Ford Beebe",
+                    "T. Hee",
+                    "Norman Ferguson",
+                    "Wilfred Jackson"
+                ],
+                "Written by": [
+                    "Walt Disney",
+                    "Ben Sharpsteen"
+                ],
+                "Produced by": "Walt Disney",
+                "Production company": "Walt Disney Productions",
+                "Distributed by": "Marvel Pictures"
+            },
+            "ActorsAndMusic": 
+            {
+                "Starring": [
+                    "Leopold Stokowski",
+                    "Deems Taylor"
+                ],
+                "Music by": "See program"
+            },
+            "otherInfo": 
+            {
+                "Release dates": [
+                    "December 21, 1937 ( 1937-12-21 ) ( Carthay Circle Theatre )",
+                    "February 4, 1938 ( 1938-02-04 ) (United States)"
+                ],
+                "Running time": "90 minutes",
+                "Budget in million": "2.8",
+                "Box office in million": "30"
+            }
+        },
+        "Country": "United States",
+        "Language": "English" 
+    }
+]
