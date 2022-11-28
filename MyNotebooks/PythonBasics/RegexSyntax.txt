@@ -1,0 +1,132 @@
+### to find anything with any MetaCharacters like .[{()\^$|?*+ use \ before MetaCharacters to escape it
+\.
+\+
+\$
+
+### to search backslash \ use double backslash
+\\
+
+### to match url like coreyms.com use backslash before dot in following way, dot is also called period 
+coreyms\.com
+
+###      Finding Patterns
+
+.       - Any Character Except New Line
+\d      - Digit (0-9)
+\D      - Not a Digit (0-9)
+\w      - Word Character (a-z, A-Z, 0-9, _)
+\W      - Not a Word Character
+\s      - Whitespace (space, tab, newline)
+\S      - Not Whitespace (space, tab, newline)
+
+\b      - Word Boundary
+\B      - Not a Word Boundary
+^       - Beginning of a String, ^ sign is called carrot 
+$       - End of a String
+
+[]      - Matches Characters in brackets
+[^ ]    - NOT Matches Characters in brackets
+|       - Either Or
+( )     - Group
+
+###      Quantifiers
+
+*       - 0 or More
++       - 1 or More
+?       - 0 or One for period or dot and other MetaCharacters, dot is also called period
+{3}     - Exact Number
+{3,4}   - Range of Numbers (Minimum, Maximum)
+
+###      Sample Regexs
+
+# abc or 123 are called literal Characters and .[{()\^$|?*+ are called MetaCharacters
+# Finding basic literal Character
+ABC
+# using word Boundary in different combination on Text examples for practice
+\bHa Ha
+\bHa\b
+# using Beginning of String
+^Ha
+# using End of a String
+Ha$
+# matching phone Numbers
+\d\d\d.\d\d\d.\d\d\d\d
+\d\d\d[-.]\d\d\d[-.]\d\d\d\d
+[89]00[-.]\d\d\d[-.]\d\d\d\d
+
+# matching word and Number Range
+[1-7]
+[a-z]
+[a-zA-Z]    # matching allcase
+[a-zA-Z0-9]    # matching all 
+
+# matching using Quantifiers
+\d{3}.\d{3}.\d{4}
+Mr\.?\s[A-Z]\w*    # ? used for matching period or without period both
+M(r|s|rs)\.?\s[A-Z]\w*    # using Group () to match all name prefix 
+
+# matching emails
+[a-zA-Z]+@[a-zA-Z]+\.com
+[a-zA-Z.]+@[a-zA-Z]+\.(com|edu)
+[a-zA-Z0-9.-]+@[a-zA-Z-]+\.(com|edu|net)
+[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+
+
+# matching urls
+https?://(www\.)?\w+\.\w+
+https?://(www\.)?(\w+)(\.\w+)    # Group zero as it groups all urls
+https?://(www\.)?(\w+)(\.\w+)   # here are three groups as three are three brackets
+Group: $1    # paste on Replace box to view Groupwise info, change value after $ to view other groups info
+$2$3
+
+# NOT Matches Characters in brackets
+[^a-z]
+[^b]at
+
+###      Text examples for practice
+
+abcdefghijklmnopqurtuvwxyz
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+Ha HaHa
+1234567890
+coreyms.com
+
+Mr. Schafer
+Mr Smith
+Ms Davis
+Mrs. Robinson
+Mr. T
+
+cat 
+bat 
+mat 
+
+# phone Numbers
+
+321-555-4321
+123.555.1234
+123*555*1234
+800-555-4321
+900.555.1234
+
+# emails
+
+CoreyMSchafer@gmail.com
+corey.schafer@university.edu
+corey-321-schafer@my-work.net
+
+# urls
+
+Group: google
+Group: coreyms
+Group: youtube
+Group: nasa
+
+google.com
+coreyms.com
+youtube.com
+nasa.gov
+
+https://www.google.com
+http://coreyms.com
+https://youtube.com
+https://www.nasa.gov
