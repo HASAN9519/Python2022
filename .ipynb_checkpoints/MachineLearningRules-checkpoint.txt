@@ -5,18 +5,18 @@
 2. Feature Engineering 
 
 Removing missing value
-Removing outlier
 train test split
 
-
-3. Data Preprocessing 
-
-Data Standardization
-
-
-4. Feature Selection
+3. Feature Selection
 
 Feature Selection on train data
+
+
+4. Data Preprocessing 
+
+Data Standardization
+Removing outlier
+
 
 5. Model Building
 
