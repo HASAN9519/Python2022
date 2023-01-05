@@ -1,0 +1,16 @@
+###      Ensemble: What is Bagging (Bootstrap Aggregation)?
+
+# Bootstrap aggregating also called bagging is a machine learning ensemble meta-algorithm designed to improve stability and accuracy of machine learning
+# algorithms used in statistical classification and regression 
+
+# In machine learning hyperparameter optimization or tuning is problem of choosing a set of optimal hyperparameters for a learning algorithm; A
+# hyperparameter is a parameter whose value is used to control learning process; By contrast, values of other parameters (node weights) are learned
+
+# curse of dimensionality refers to various phenomena that arise when analyzing and organizing data in high-dimensional spaces that do not occur in
+# low-dimensional settings such as three-dimensional physical space of everyday experience
+
+# Gradient boosting is typically used with decision trees (especially CART trees) of a fixed size as base learners, For this special case Friedman
+# proposes a modification to gradient boosting method which improves quality of fit of each base learner
+
+# XGBoost is a decision-tree-based ensemble Machine Learning algorithm that uses a gradient boosting framework, In prediction problems involving
+# unstructured data (images, text) artificial neural networks tend to outperform all other algorithms or frameworks
