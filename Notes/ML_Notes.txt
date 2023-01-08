@@ -1,0 +1,56 @@
+###      Ensemble: What is Bagging (Bootstrap Aggregation)?
+
+# Bootstrap aggregating also called bagging is a machine learning ensemble meta-algorithm designed to improve stability and accuracy of machine learning
+# algorithms used in statistical classification and regression 
+
+# In machine learning hyperparameter optimization or tuning is problem of choosing a set of optimal hyperparameters for a learning algorithm; A
+# hyperparameter is a parameter whose value is used to control learning process; By contrast, values of other parameters (node weights) are learned
+
+# curse of dimensionality refers to various phenomena that arise when analyzing and organizing data in high-dimensional spaces that do not occur in
+# low-dimensional settings such as three-dimensional physical space of everyday experience
+
+# Gradient boosting is typically used with decision trees (especially CART trees) of a fixed size as base learners, For this special case Friedman
+# proposes a modification to gradient boosting method which improves quality of fit of each base learner
+
+# XGBoost is a decision-tree-based ensemble Machine Learning algorithm that uses a gradient boosting framework, In prediction problems involving
+# unstructured data (images, text) artificial neural networks tend to outperform all other algorithms or frameworks
+
+
+1st distribution: Pareto Distribution (power law probability distribution, talks about 80-20 rule i.e. 80% of outcomes are result of 20% causes)
+
+
+Convert pareto distribution to normal distribution: using box cox transformation (it converts to nearly normal distribution, formula is: 
+x_new = log(x_old) if lambda = 0
+x_new = (x_old**lambda - 1)/lambda otherwise)
+
+
+Check if distribution is normal gaussian distribution or not: Draw QQ plots (Quantile-Quantile plot) where we draw actual quantiles for data and theoretical quantiles and then look at deviation.
+
+
+What is standard normal distribution?
+Normal distribution with mean 0 and std 1
+
+
+Plot A: Right Skewed
+mean > median > mode
+Plot B: Left Skewed
+mode > median > mean
+
+Difference between fit_transform and transform
+fit_transform do two operations on input data in one go which are fit the transformer as per the calculations on input data and then apply those calculations to input data
+transform: will only apply calculations on input data as per transformer.
+
+When we use fit_predict and what is it?
+fit_predict fits the model as per input data and later on make a prediction as well using trained model. We generally use it in clustering algorithms like DBSCAN where we can only do fit_predict or fit. Predict is not possible there.
+
+
+What is difference between standardization and normalization?
+1. Normalization is basically min max scaling
+2. Values belong to [0,1] or [-1,1]
+3. Affected by outliers
+4. Useful when we don't know about distribution 
+
+1. Standardization converts data in a manner that mean of transformed data is 0 and std=1
+2. No bound on values
+3. Not much affected by outliers
+4. Useful when data distribution is normal gaussian distribution

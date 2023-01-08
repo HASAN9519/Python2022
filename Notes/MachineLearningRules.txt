@@ -1,0 +1,25 @@
+###################          Order of Building Machine Learning Model
+
+1. Loading Librarys and Data Loading
+
+2. Feature Engineering 
+
+Removing missing value
+Removing outlier
+train test split
+
+
+3. Data Preprocessing 
+
+Data Standardization
+
+
+4. Feature Selection
+
+Feature Selection on train data
+
+5. Model Building
+
+choose best Model
+Model Evaluation with Crossvalidation
+Model Visualization
