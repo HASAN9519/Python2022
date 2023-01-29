@@ -15,42 +15,151 @@
 # XGBoost is a decision-tree-based ensemble Machine Learning algorithm that uses a gradient boosting framework, In prediction problems involving
 # unstructured data (images, text) artificial neural networks tend to outperform all other algorithms or frameworks
 
-
-1st distribution: Pareto Distribution (power law probability distribution, talks about 80-20 rule i.e. 80% of outcomes are result of 20% causes)
-
-
-Convert pareto distribution to normal distribution: using box cox transformation (it converts to nearly normal distribution, formula is: 
+# Pareto Distribution (power law probability distribution, talks about 80-20 rule i.e. 80% of outcomes are result of 20% causes)
+# Converting pareto distribution to normal distribution using box cox transformation, it converts to nearly normal distribution, formula is: 
 x_new = log(x_old) if lambda = 0
 x_new = (x_old**lambda - 1)/lambda otherwise)
 
+# to Check if distribution is normal gaussian distribution or not: Draw QQ plots (Quantile-Quantile plot) where drawing actual quantiles for data and
+# theoretical quantiles and then look at deviation
+# Normal distribution with mean 0 and std 1
+# for Right Skewed plot or distribution: mean > median > mode
+# for Left Skewed plot or distribution: mode > median > mean
 
-Check if distribution is normal gaussian distribution or not: Draw QQ plots (Quantile-Quantile plot) where we draw actual quantiles for data and theoretical quantiles and then look at deviation.
+###      Difference between fit_transform and transform
+# fit_transform do two operations on input data in one go which are fit transformer as per calculations on input data and then apply those calculations
+# to input data but transform will only apply calculations on input data as per transformer
 
+###      When to use fit_predict and what is it
+# fit_predict fits model as per input data and later on make a prediction as well using trained model, generally used in clustering algorithms like
+# DBSCAN where only fit_predict or fit can be used, Predict is not possible there
 
-What is standard normal distribution?
-Normal distribution with mean 0 and std 1
-
-
-Plot A: Right Skewed
-mean > median > mode
-Plot B: Left Skewed
-mode > median > mean
-
-Difference between fit_transform and transform
-fit_transform do two operations on input data in one go which are fit the transformer as per the calculations on input data and then apply those calculations to input data
-transform: will only apply calculations on input data as per transformer.
-
-When we use fit_predict and what is it?
-fit_predict fits the model as per input data and later on make a prediction as well using trained model. We generally use it in clustering algorithms like DBSCAN where we can only do fit_predict or fit. Predict is not possible there.
-
-
-What is difference between standardization and normalization?
+###      difference between standardization and normalization
+# Normalization is process of transforming values of several variables into a similar range, Typical normalizations include scaling variable so 
+# variable average is 0, scaling variable so variance is 1 or scaling variable so variable values range from 0 to 1
 1. Normalization is basically min max scaling
 2. Values belong to [0,1] or [-1,1]
 3. Affected by outliers
-4. Useful when we don't know about distribution 
+4. Useful when don't know about distribution 
 
+# Standardization is process of transforming data into a common format which allows researcher to make meaningful comparison
 1. Standardization converts data in a manner that mean of transformed data is 0 and std=1
 2. No bound on values
 3. Not much affected by outliers
 4. Useful when data distribution is normal gaussian distribution
+
+# Data Wrangling is process of converting data from initial format to a format that may be better for analysis
+# Binning is a process of transforming continuous numerical variables into discrete categorical 'bins' for grouped analysis
+
+###      Correlation and Causation
+
+# Correlation: a measure of extent of interdependence between variables
+# Causation: relationship between cause and effect between two variables
+
+# It is important to know difference between these two and that correlation does not imply causation, Determining correlation is much simpler than
+# determining causation as causation may require independent experimentation
+
+# Pearson Correlation measures linear dependence between two variables X and Y
+# resulting coefficient is a value between -1 and 1 inclusive, where:
+1: Total positive linear correlation
+0: No linear correlation, two variables most likely do not affect each other
+-1: Total negative linear correlation
+
+###      P-value
+
+# P-value is probability value that determines correlation between two variables is statistically significant or not, Normally, if choose a significance
+# level of 0.05 which means that 95% confident about correlation between variables is significant, By convention when:
+p-value < 0.001, there is strong evidence that correlation is significant
+p-value < 0.05, there is moderate evidence that correlation is significant
+p-value < 0.1, there is weak evidence that correlation is significant
+p-value > 0.1, there is no evidence that correlation is significant
+
+###      ANOVA (Analysis of Variance)
+
+# Analysis of Variance (ANOVA) is a statistical method used to test whether there are significant differences between means of two or more groups, ANOVA
+# returns two parameters: 
+F-test score: ANOVA assumes means of all groups are same, calculates how much actual means deviate from assumption and reports it as F-test score; A
+larger score means there is a larger difference between means
+P-value: P-value tells how statistically significant is calculated score value
+
+###      Residual Plot
+
+# A good way to visualize variance of data is to use a residual plot, difference between observed value (y) and predicted value (Yhat) is called
+# residual (e), looking at a regression plot residual is distance from data point to fitted regression line
+# A residual plot is a graph that shows residuals on vertical y-axis and independent variable on horizontal x-axis, should pay attention at spread of
+# residualsto when looking at a residual plot, If points in a residual plot are randomly spread out around x-axis then a linear model is appropriate for
+# data because Randomly spread out residuals means that variance is constant and thus linear model is a good fit for this data
+
+###      Ridge regression 
+
+# Ridge regression is a regression that is employed in a Multiple regression model when Multicollinearity occurs, Multicollinearity is when there is a
+# strong relationship among independent variables, Ridge regression is very common with polynomial regression, Ridge regression is used to regularize
+# and reduce standard errors to avoid over-fitting a regression model
+
+###      Data Visualization
+
+# Dark Horse Analytics states 3 best practices for creating a visual: Less is more effective, Less is more attractive, Less is more impactive
+# There are three different layers in architecture of matplotlib which are following: Backend Layer, Artist layer and Scripting layer
+# Artist layer allows full control and fine-tuning of Matplotlib top-level container for all plot elements
+
+# can modify a figure after it is rendered using notebook backend
+# Matplotlib magic functions are: %matplotlib notebook, %matplotlib inline
+
+# A line chart or line plot is a type of plot which displays information as a series of data points called 'markers' connected by straight line 
+# segments; It is a basic type of chart common in many fields; Use line plot for a continuous data set; These are best suited for trend-based
+# visualizations of data over a period of time
+
+# Area plots are stacked by default; to produce a stacked area plot, each column must be either all positive or all negative values (any NaN i.e. not a
+# number, values will default to 0); To produce an unstacked plot set parameter stacked to value False
+
+# A histogram is a way of representing frequency distribution of numeric dataset; it works by partitioning x-axis into bins, assigns each data point in
+# dataset to a bin and then counts number of data points that have been assigned to each bin; So y-axis is frequency or number of data points in each
+# bin; can change bin size and usually one needs to tweak it so that distribution is displayed nicely
+
+# A bar plot is a way of representing data where length of bars represents magnitude/size of feature/variable; Bar graphs usually represent numerical
+# and categorical variables grouped in intervals
+
+# A pie chart is a circular graphic that displays numeric proportions by dividing a circle (or pie) into proportional slice
+
+# A box plot is a way of statistically representing distribution of data through five main dimensions: 
+Minimun: Smallest number in dataset
+First quartile: Middle number between minimum and median
+Second quartile (Median): Middle number of (sorted) dataset
+Third quartile: Middle number between median and maximum
+Maximum: Highest number in dataset
+
+# A scatter plot (2D) is a useful method of comparing variables against each other; Scatter plots look similar to line plots in that they both map 
+# independent and dependent variables on a 2D graph; While data points are connected together by a line in a line plot, they are not connected in a
+# scatter plot; data in a scatter plot is considered to express a trend; With further analysis using tools like regression, can mathematically calculate 
+# this relationship and use it to predict trends outside dataset
+
+# bubble plot is a variation of scatter plot that displays three dimensions of data (x, y, z); data points are replaced with bubbles and size of bubble
+# is determined by third variable z also known as weight; In maplotlib, can pass in an array or scalar to parameter s to plot() that contains weight of
+# each point
+
+# A waffle chart is an interesting visualization that is normally created to display progress toward goals; It is commonly an effective option when
+# trying to add interesting visualization features to a visual that consists mainly of cells such as an Excel dashboard; A Waffle chart is a great way
+# to visualize data in relation to a whole or to highlight progress against a given threshold
+
+# Word clouds (also known as text clouds or tag clouds) work in a simple way: more a specific word appears in a source of textual data (such as a
+# speech, blog post, or database) bigger and bolder it appears in word cloud
+
+# clustering markers, superimposed onto a map in Folium using a marker cluster object; In choropleth maps higher measurement of statistical variable 
+# being displayed on map has brighter color
+
+
+
+###      Plotly
+
+# Plotly is an interactive, open-source plotting library that supports over 40 chart types; web based visualizations created using Plotly python can be
+# displayed in Jupyter notebook, saved to standalone HTML files or served as part of pure Python-built web applications using Dash; Plotly Graph Objects
+# is low-level interface to figures, traces and layout whereas plotly express is a high-level wrapper for Plotly; Dash is an Open-Source User Interface 
+# Python library for creating reactive, web-based applications; It is both enterprise-ready and a first-class member of Plotly’s open-source tools; Core
+# and HTML are two components of dash; html component library has a component for every HTML tag; core component describe higher-level components that
+# are interactive and are generated with JavaScript, HTML and CSS through React.js library; A callback function is a python function that is 
+# automatically called by Dash whenever an input component's property changes; Callback function is decorated with '@app.callback' decorator; Callback
+# decorator function takes two parameters: Input and Output; Input and Output to callback function will have component id and component property;
+# Multiple inputs or outputs should be enclosed inside either a list or tuple 
+
+# plotly.express module (usually imported as px) contains functions that can create entire figures at once and is referred to as Plotly Express or PX
+# Plotly Express is a built-in part of plotly library and is recommended starting point for creating most common figures
