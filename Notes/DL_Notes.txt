@@ -1,0 +1,16 @@
+# ANN (Artificial Neural Networks) are helpful for solving complex problems 
+# CNN (Convolution Neural Networks) are best for solving Computer Vision-related problems
+# RNN (Recurrent Neural Networks) are proficient in Natural Language Processing
+
+
+
+###      advantage of using CNN over ANN for image classification even though can solve image classification using ANN
+
+1.  Feedforward neural networks can learn a single feature representation of image but in case of complex images, ANN will fail to give better
+predictions, this is because it cannot learn pixel dependencies present in images
+2.  CNN can learn multiple layers of feature representations of an image by applying filters or transformations
+3.  In CNN, number of parameters for network to learn is significantly lower than multilayer neural networks since number of units in network decreases
+therefore reducing chance of overfitting
+4.  CNN considers context information in small neighborhood and due to this feature, these are very important to achieve a better prediction in data
+like images, Since digital images are a bunch of pixels with high values, it makes sense to use CNN to analyze them, CNN decreases their values which is
+better for training phase with less computational power and less information loss
